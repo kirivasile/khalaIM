@@ -11,4 +11,16 @@
     <!-- Register activity -->
     <string name="Register">Зарегистрироваться</string>
     <string name="Nick">Никнейм</string>
+
+    <!-- Menu -->
+    <string name="Chats">Беседы</string>
+    <string name="Contacts">Контакты</string>
+    <string name="Logout">Выйти</string>
+
+    <!-- Menu activity -->
+    <string name="OpenDrawer">OpenDrawer</string>
+    <string name="CloseDrawer">CloseDrawer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
