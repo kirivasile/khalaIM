@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">khala_im</string>
+
+    <!-- Login activity -->
+    <string name="Email">Email</string>
+    <string name="Password">Пароль</string>
+    <string name="Login">ВОЙТИ</string>
+    <string name="DoUHaveAccount">Нет аккаунта?</string>
+    <string name="Create">СОЗДАТЬ</string>
+</resources>
