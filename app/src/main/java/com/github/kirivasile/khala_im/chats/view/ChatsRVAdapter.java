@@ -1,6 +1,9 @@
 package com.github.kirivasile.khala_im.chats.view;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.github.kirivasile.khala_im.R;
+import com.github.kirivasile.khala_im.chat.ChatActivity;
 import com.github.kirivasile.khala_im.model.Chat;
 import com.squareup.picasso.Picasso;
 
@@ -20,12 +24,14 @@ import java.util.List;
  */
 public class ChatsRVAdapter extends RecyclerView.Adapter<ChatsRVAdapter.ViewHolder> {
     public static class ViewHolder extends RecyclerView.ViewHolder{
+        private CardView mCardView;
         private ImageView mUserAvatar;
         private TextView mUserName;
         private TextView mText;
 
         public ViewHolder(View itemView) {
             super(itemView);
+            mCardView = (CardView) itemView.findViewById(R.id.cardView);
             mUserAvatar = (ImageView) itemView.findViewById(R.id.chatsUserAvatar);
             mUserName = (TextView) itemView.findViewById(R.id.chatsUserName);
             mText = (TextView) itemView.findViewById(R.id.chatsTextHeader);
@@ -56,6 +62,13 @@ public class ChatsRVAdapter extends RecyclerView.Adapter<ChatsRVAdapter.ViewHold
         Picasso.with(mContext)
                 .load(chat.getAvatarUrl())
                 .into(holder.mUserAvatar);
+        holder.mCardView.setOnClickListener((View view) -> {
+            Intent intent = new Intent(mContext, ChatActivity.class);
+            Bundle args = new Bundle();
+            args.putSerializable(ChatActivity.DATA_TAG, chat);
+            intent.putExtras(args);
+            mContext.startActivity(intent);
+        });
     }
 
     @Override

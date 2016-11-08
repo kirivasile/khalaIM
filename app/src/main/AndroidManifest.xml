@@ -22,8 +22,10 @@
         <activity
             android:name=".authorization.RegistrationActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".menu.MenuActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".menu.MenuActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".chat.ChatActivity"></activity>
     </application>
 
 </manifest>
