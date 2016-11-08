@@ -19,7 +19,7 @@ import android.widget.TextView;
 import com.github.kirivasile.khala_im.R;
 import com.github.kirivasile.khala_im.authorization.LoginActivity;
 import com.github.kirivasile.khala_im.chats.view.ChatsFragment;
-import com.github.kirivasile.khala_im.contacts.ContactsFragment;
+import com.github.kirivasile.khala_im.contacts.view.ContactsFragment;
 
 public class MenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
