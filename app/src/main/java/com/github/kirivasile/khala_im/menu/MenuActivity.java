@@ -18,7 +18,7 @@ import android.widget.TextView;
 
 import com.github.kirivasile.khala_im.R;
 import com.github.kirivasile.khala_im.authorization.LoginActivity;
-import com.github.kirivasile.khala_im.chats.ChatsFragment;
+import com.github.kirivasile.khala_im.chats.view.ChatsFragment;
 import com.github.kirivasile.khala_im.contacts.ContactsFragment;
 
 public class MenuActivity extends AppCompatActivity
@@ -70,6 +70,11 @@ public class MenuActivity extends AppCompatActivity
         userEmailTV.setText(email);
 
         mNavigationView.getMenu().getItem(0).setChecked(true);
+
+        if (mChatFragment == null) {
+            mChatFragment = new ChatsFragment();
+        }
+        replaceFragment(mChatFragment);
     }
 
     @Override

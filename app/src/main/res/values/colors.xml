@@ -6,4 +6,5 @@
 
     <color name="colorShadowBackground">#80A9A9A9</color>
     <color name="colorMyGreen">#32CD32</color>
+    <color name="colorLightText">#A9A9A9</color>
 </resources>
